@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="./image/bookmark.png" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=PT+Sans+Caption:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Righteous&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css  -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="heder d-flex justify-content-center">
+        <h1 class="py-2 text-center position-relative">Bookmarker</h1>
+      </div>
+      <div class="input mt-5 heder">
+        <div class="titel p-4 d-flex justify-content-center">
+          <h2 class="text-center">
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        </div>
+        <form action="">
+          <div class="mb-4">
+            <label for="name">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name
+            </label>
+            <input type="text" id="name" class="" placeholder="Bookmark Name" />
+          </div>
+          <div class="mb-4">
+            <label for="url">
+              <i class="fa-solid fa-link pe-2"></i>
+              Site URL
+            </label>
+            <input type="text" id="url" class="" placeholder="Website URL" />
+          </div>
+        </form>
+        <div class="d-flex justify-content-center">
+          <button
+            type="button"
+            class="btn btn-submit px-5 text-white btnmain"
+            onclick="add()"
+            id="btnSubmit"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            class="btn btn-submit px-5 text-white ms-4 bg-primary d-none"
+            onclick="updateRow()"
+            id="btnupdate"
+          >
+            update
+          </button>
+        </div>
+      </div>
+
+      <table class="table text-center bg-light">
+        <thead class="mt-3">
+          <tr>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">update</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent"></tbody>
+      </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
